@@ -7,8 +7,8 @@ const Waiter = () => {
   return (
     <div className={components}>
       <h2>Waiter View</h2>
-      <Link to={`${process.env.PUBLIC_URL}/waiter/order/new`}>new order</Link>
-      <Link to={`${process.env.PUBLIC_URL}/waiter/order/:id`}>order id</Link>
+      <Link to={`/waiter/order/new`}>new order</Link>
+      <Link to={`/waiter/order/:id`}>order id</Link>
     </div>
   );
 };
