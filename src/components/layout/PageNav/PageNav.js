@@ -1,25 +1,27 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import Button from '@material-ui/core/Button';
 import styles from './PageNav.module.scss';
 
 const PageNav = () => {
+  const { component, link } = styles;
   return (
-    <nav className={styles.component}>
-      <NavLink exact to={`/`} activeClassName='active'>
+    <nav className={component}>
+      <Button component={NavLink} className={link} exact to={`/`} activeClassName='active'>
         Home
-      </NavLink>
-      <NavLink to={`/login`} activeClassName='active'>
+      </Button>
+      <Button component={NavLink} className={link} to={`/login`} activeClassName='active'>
         Login
-      </NavLink>
-      <NavLink to={`/tables`} activeClassName='active'>
+      </Button>
+      <Button component={NavLink} className={link} to={`/tables`} activeClassName='active'>
         Tables
-      </NavLink>
-      <NavLink to={`/waiter`} activeClassName='active'>
+      </Button>
+      <Button component={NavLink} className={link} to={`/waiter`} activeClassName='active'>
         Waiter
-      </NavLink>
-      <NavLink to={`kitchen`} activeClassName='active'>
+      </Button>
+      <Button component={NavLink} className={link} to={`kitchen`} activeClassName='active'>
         Kitchen
-      </NavLink>
+      </Button>
     </nav>
   );
 };
