@@ -1,10 +1,9 @@
-# DEVELOPMENT
+#Development
 
-## URLe dostepne z poziomu komendy 'yarn start'
+## URLe dostepne dzięki 'yarn start'
 
-- http://localhost:3000 - biezacy projekt, czyli panel administracyjny (`webpack-dev-server`)
-- http://localhost:3131 - strona pizzeri dla klientow
-- http://localhost:3131/api - url api projektu
-- http://localhost:3131/api/db - poglad calej bazy danych w API
-- http://localhost:3131/panel - stan biezacego projektu (panel administracyjny) z momentu uruchomienia `yarn start`
-(strona pod tym adresem nie bedzie zmieniala sie *na zywo* wraz ze zmianami wprowadzanymi w plikach projektu).
+http://localhost:3000 - bieżący projekt, czyli panel administracyjny (webpack-devserver)
+http://localhost:3131 - strona pizzerii dla klientów
+http://localhost:3131/api - url API projektu
+http://localhost:3131/api/db - podgląd całej bazy danych w API
+http://localhost:3131/panel - stan bieżącego projektu (panel adm.) z momentu uruchomienia yarn start (strona pod tym adresem nie będzie się zmieniała na żywo wraz ze zmianami wprowadzonyymi w plikach projektu)

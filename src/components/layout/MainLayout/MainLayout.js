@@ -1,31 +1,28 @@
 import React from 'react';
-import PropsTypes from 'prop-types';
-import PageNav from '../PageNav/PageNav';
+import PropTypes from 'prop-types';
+import PageNav from './../PageNav/PageNav.js';
 import AppBar from '@material-ui/core/AppBar';
-import ToolBar from '@material-ui/core/Toolbar';
+import Toolbar from '@material-ui/core/Toolbar';
 import Container from '@material-ui/core/Container';
-import styles from './MainLayout.module.scss';
 
-const MainLayout = ({ children }) => {
-  const { component } = styles;
-  return (
-    <div className={component}>
-      <AppBar>
-        <Container maxWidth="lg">
-          <ToolBar disableGutters>
-            <PageNav />
-          </ToolBar>
-        </Container>
-      </AppBar>
+const MainLayout = ({ children }) => (
+  <div className="MainLayout">
+    <AppBar>
       <Container maxWidth="lg">
-        <ToolBar />
-        {children}
+        <Toolbar disableGutters>
+          <PageNav />
+        </Toolbar>
       </Container>
-    </div>
-  );
-};
+    </AppBar>
+    <Container maxWidth="lg">
+      <Toolbar />
+      {children}
+    </Container>
+  </div>
+);
 
 MainLayout.propTypes = {
-  children: PropsTypes.node,
+  children: PropTypes.node,
 };
+
 export default MainLayout;

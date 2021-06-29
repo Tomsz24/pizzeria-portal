@@ -1,53 +1,56 @@
-# DASHBOARD
- `/` 
- - statystyki dzisiejszych zamowien (zdalnie i lokalnie)
- - liste rezerwacji oraz eventow na dzisiaj
+# Dashboard
 
-# Widok dsotepnosci stolikow
+- `/`
+  -statystyki dzisiejszych zamówień (zdalne lokalne)
+  -lista rezerwacji i eventów zaplanowanych na dzisiaj
 
-  `/tables/`
-  - wybor daty i godziny
-  - tabela z lista rezerwacji oraz wydarzen
-    - kazda kolumna = 1 stolik
-    - kazdy wiersz = 30min
-    - ma przypominac widok tygodnia w kalendarzu googla, gdzie w kolumnach zamiast dni są rozne stoliki
-    - po kliknieciu rezerwacji lub eventu, przechodzimy na strone szczegolow
-  `/tables/booking/:id`
-    - zawiera wszystkie informacje dotyczacych rezerwacji
-    - umozliwia edycje i zapisanie zmian
-  `/tables/booking/new/`
-    - analogicznie do powyzszej bez poczatkowych informacji 
-  `/tables/events/:id`
-    - analogicznie dla powyzej dla eventow
-  `/tables/events/new/`
-    - analogicznie do powyzszej, dla eventow, bez poczatkowych informacji
+# Logowanie
 
-# widok kelenra
+- `/logowanie`
+  -pola na login i hasło
+  -guzik do zalogowana (link do dashboard)
 
-  `/waiter/`
-    - tabela
-      - w wierszach stoliki
-      - w kolumnach rozne rodzaje informacji (status, czas od ostaniej aktywnosci)
-      - dostepne akcje do dostepnego stolika
-  `/waiter/order/new/`
-    - nr stoliak (edytowalny)
-    - menu
-    - opcje wybranego produktu
-    - zamowienie (z opcjam i cena)
-    - kwota zamownia
-  `/waiter/order/:id`
-    - jak powyzsza 
+# widok dostepnosci stolikow
 
-# Widok kuchni
+- `/tables`
+  -dostępność wszystich stolików
+  -wybór daty i godziny
+  -tabela z listą rezerwacji oraz wydarzeń
+  -każda kolumna =1 stolik
+  -każdy wiersz = 30 minut
+  -ma przypominać widok tygdnia w kalendarzu Google, gdzie w kolumnach zamiast dni są różne stoliki
+  -po kliknieciu rezerwacji lub eventu, przechodzimy na stronę szczegółów
+- `/tables/booking/:id`
+  -zamiera wszystkie informacje dotyczące rezerwacji
+  -umozliwia edycję i zapisanie zmian
+- `/tables/booking/new`
+  -analogicznie do powyzszej, bez poczatkowych informacji
+- `/tables/events/:id`
+  -analogicznie do powyzszej, dla eventów
+- `/tables/events/new`
+  -analogicznie do powyzszej, dla eventów, bez poczatkowych informacji
 
-  `/kitchen/`
-    - lista zamowien w kolejnosci ich zlozenia
-    - lista musi zawierac:
-      - numer stolika (lub zamowniea zdalengo)
-      - pelne informacje dotyczace zamownionych dan
-    - na lisicie musi byc mozliwosc oznaczenia zamowienia jako 'zrealizowane'
+# Widok kelnera
 
-# logowanie
-  `/login/`
-  - pola na login i haslo
-  - guzik do zalogowania(link do dashboardu)
+- `/waiter`
+- tabela
+  - w wierszach stoliki
+  - w kolumnach różne rodzaje informacji (status, czas od ostatniej aktywności)
+  - w ostatniej kolumnie dostępne akcje dla danego stolika
+- `/waiter/order/new`
+  - numer stolika (edytowalny)
+  - menu produktów
+  - opcje wybranego produktu
+  - zamowienie (zamowione produkty z opcjami i ceną)
+  - kwotę zamówienia
+- `/waiter/order/:id`
+  -jak powyższa
+
+# widok kuchni
+
+- `/kitchen`
+  - wyświetla listę zamówień w kolejności ich złożenia
+  - lista musi zawierać:
+    - numer stolika (lub zamówienia zdalnego)
+    - pełne informacje dot. zamówionych dań
+  - na liście musi być możliwość oznaczenia zamowienia jako zrealizowane
